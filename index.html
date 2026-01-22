@@ -1,155 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Pavan 🎉</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Birthday Pavan 🎉</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ffecd2, #fcb69f);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
 
-    .card {
-      background: #ffffff;
-      padding: 35px;
-      border-radius: 22px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-      max-width: 420px;
-      text-align: center;
-      animation: popIn 1.5s ease;
-      position: relative;
-      z-index: 2;
-    }
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
 
-    h1 {
-      color: #ff4d6d;
-      margin-bottom: 8px;
-      font-size: 28px;
-    }
+  h1 {
+    color: #ff4d6d;
+    font-size: 28px;
+    margin-bottom: 5px;
+    animation: pop 1.2s ease;
+  }
 
-    h2 {
-      color: #6a5acd;
-      margin-bottom: 18px;
-    }
+  h2 {
+    color: #6a5acd;
+    margin-bottom: 20px;
+    animation: pop 1.5s ease;
+  }
 
-    p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #333;
-    }
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.8s ease;
+  }
 
-    .highlight {
-      color: #ff7a18;
-      font-weight: bold;
-      font-size: 17px;
-      margin-top: 20px;
-    }
+  p.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-    .from {
-      margin-top: 25px;
-      font-size: 15px;
-      color: #555;
-      font-style: italic;
-    }
+  .highlight {
+    color: #ff7a18;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 20px;
+  }
 
-    @keyframes popIn {
-      0% {
-        transform: scale(0.7);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
+  .from {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #555;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
 
-    /* Floating hearts animation */
-    .heart {
-      position: absolute;
-      bottom: -20px;
-      color: rgba(255, 77, 109, 0.6);
-      font-size: 20px;
-      animation: floatUp 6s linear infinite;
-    }
+  .from.show {
+    opacity: 1;
+  }
 
-    @keyframes floatUp {
-      0% {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-110vh);
-        opacity: 0;
-      }
+  @keyframes pop {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  /* Confetti */
+  .confetti {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    top: -10px;
+    animation: fall 4s linear infinite;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0;
     }
-  </style>
+  }
+</style>
 </head>
 
 <body>
 
-  <div class="card">
-    <h1>🎂 Happy Birthday 🎉</h1>
-    <h2> <span class="highlight">Pavan</span> 💫</h2>
+<div class="card">
+  <h1>🎂 Happy Birthday 🎉</h1>
+  <h2><span class="highlight">Pavan</span> 💫</h2>
 
-    <p>
-      Today isn’t just another day — it’s a reminder that someone truly special
-      was born. You bring positivity, smiles, and calm energy wherever you go.
-    </p>
+  <p class="msg">
+    Today isn’t just another day — it’s a reminder that someone truly special
+    was born. You bring positivity, smiles, and calm energy wherever you go.
+  </p>
 
-    <p>
-      May this year surprise you with happiness, success, peace, and moments
-      that make you smile without any reason 😊
-    </p>
-    <p>
-      Ninu nange innocent tarane feel agtiya hope nin love life ninige sigli 
-      ninu istapador jotene ninu konevargu irotara agli. Nin olle mansige ollede 
-      agutte.
-    </p> 
+  <p class="msg">
+    May this year surprise you with happiness, success, peace, and moments
+    that make you smile without any reason 😊
+  </p>
 
-    <p>
-      Never stop being the amazing person you are. The world genuinely feels
-      brighter with you in it ✨
-    </p>
+  <p class="msg">
+    Ninu nange innocent tarane feel agtiya. Hope nin love life ninige sigli,
+    ninu istapador jotege ninu konevargu irotara agli.
+    Nin olle mansige ollede agutte 🤍
+  </p>
 
-    <p class="highlight">
-      Be happy forever, Gilli 🤍  
-      May your smile always stay the same and your heart always stay light 🌸
-    </p>
+  <p class="msg">
+    Never stop being the amazing person you are.
+    The world genuinely feels brighter with you in it ✨
+  </p>
 
-    <div class="from">
-      With warm wishes and good thoughts,<br/>
-      💅🏻 Someone who truly wishes you the best
-    </div>
+  <p class="msg highlight">
+    Be happy forever, Gilli 🤍  
+    May your smile always stay the same and your heart always stay light 🌸
+  </p>
+
+  <div class="from">
+    With warm wishes and good thoughts,<br/>
+    💅🏻 Someone who truly wishes you the best
   </div>
+</div>
 
-  <script>
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.innerHTML = "💖";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = (Math.random() * 15 + 15) + "px";
-      document.body.appendChild(heart);
+<script>
+  // Show text one by one
+  const messages = document.querySelectorAll(".msg");
+  const fromText = document.querySelector(".from");
 
-      setTimeout(() => {
-        heart.remove();
-      }, 6000);
-    }
+  messages.forEach((msg, index) => {
+    setTimeout(() => {
+      msg.classList.add("show");
+    }, index * 1500 + 1000);
+  });
 
-    setInterval(createHeart, 500);
-  </script>
+  setTimeout(() => {
+    fromText.classList.add("show");
+  }, messages.length * 1500 + 1200);
+
+  // Confetti effect
+  function createConfetti() {
+    const confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.backgroundColor =
+      ["#ff4d6d", "#6a5acd", "#ff7a18", "#00c9a7"][Math.floor(Math.random() * 4)];
+    confetti.style.animationDuration = (Math.random() * 2 + 3) + "s";
+    document.body.appendChild(confetti);
+
+    setTimeout(() => confetti.remove(), 4000);
+  }
+
+  setInterval(createConfetti, 200);
+</script>
 
 </body>
 </html>
