@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Pavan 🎉</title>
 
-<!-- Google Font for fancy style -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -17,77 +17,80 @@
 
 body {
   min-height: 100vh;
-  background: #000; /* fallback */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  background: #000;
   overflow: hidden;
-  position: relative;
-}
-
-/* Card container */
-.card {
-  position: relative;
-  width: 100%;
-  max-width: 420px;
-  text-align: center;
   font-family: 'Roboto', sans-serif;
 }
 
-/* Photo */
+/* Card */
+.card {
+  position: relative;
+  width: 95%;
+  max-width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* Photo background dimmed */
 .card img {
   width: 100%;
-  border-radius: 20px;
   display: block;
+  filter: brightness(0.45); /* dim photo so text is visible */
 }
 
 /* Text overlay */
 .text-overlay {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
   color: #fff;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.95rem;
 }
 
-/* Fancy title */
+/* Title */
 .text-overlay h1 {
   font-family: 'Pacifico', cursive;
   font-size: 2rem;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
 /* Paragraphs */
 .text-overlay p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 6px 0;
+  margin: 8px 0;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(20px);
   animation: reveal 1s forwards;
 }
 
-/* Each paragraph delay */
-.text-overlay p:nth-child(2) { animation-delay: 1.5s; }
-.text-overlay p:nth-child(3) { animation-delay: 3s; }
-.text-overlay p:nth-child(4) { animation-delay: 4.5s; }
-.text-overlay p:nth-child(5) { animation-delay: 6s; }
-.text-overlay p:nth-child(6) { animation-delay: 7.5s; }
+/* Paragraph animation delays */
+.text-overlay p:nth-of-type(1) { animation-delay: 1.5s; }
+.text-overlay p:nth-of-type(2) { animation-delay: 3s; }
+.text-overlay p:nth-of-type(3) { animation-delay: 4.5s; }
+.text-overlay p:nth-of-type(4) { animation-delay: 6s; }
+.text-overlay p:nth-of-type(5) { animation-delay: 7.5s; }
 
 .highlight {
+  color: #ffd700;
   font-weight: bold;
   font-size: 1rem;
-  color: #ffd700;
 }
 
 .from {
   font-size: 0.85rem;
   margin-top: 10px;
   font-style: italic;
-  color: #fff;
   opacity: 0;
   animation: reveal 1s forwards;
   animation-delay: 9s;
@@ -95,23 +98,20 @@ body {
 
 /* Reveal animation */
 @keyframes reveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Sparkle */
+/* Sparkles/confetti */
 .sparkle {
   position: fixed;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background: #fff;
   border-radius: 50%;
   opacity: 0.8;
-  box-shadow: 0 0 6px #fff;
-  animation: sparkle 1.5s linear infinite;
+  box-shadow: 0 0 8px #fff;
   pointer-events: none;
+  animation: sparkle 1.5s linear infinite;
 }
 
 @keyframes sparkle {
@@ -127,36 +127,15 @@ body {
 <div class="card">
   <img src="pavan-bg.jpg" alt="Pavan">
   <div class="text-overlay">
-    <h1>🎉 Happy Birthday Pavan 🤴🏻🎉🎊</h1>
+    <h1>🎉 Happy Birthday Pavan 👸🏻🎊✨</h1>
 
-    <p>
-      Today isn’t just another day — it’s a reminder that someone truly special was born.
-    </p>
-
-    <p>
-      May this year surprise you with happiness, success, and moments that make you smile 😊
-    </p>
-
-    <p>
-      Ninu nange innocent tarane feel agtiya,
-      hope nin love life ninige sigli. Ni ista pador jote konevargu
-      irotara agli. Nin olle mansige yavaglu ollede agutte. Enjoy your day today.
-      
-    </p>
-
-    <p>
-      Never stop being the amazing person you are. The world feels brighter with you ✨
-    </p>
-
-    <p class="highlight">
-      Be happy forever, Gilli 😃<br/>
-      May your smile always stay bright 🌸
-    </p>
-
-    <div class="from">
-      With warm wishes and good thoughts,<br/>
-      💅🏻 Someone who truly wishes you the best
-    </div>
+    <p>Today isn’t just another day — it’s a reminder that someone truly special was born.</p>
+    <p>May this year surprise you with happiness, success, and moments that make you smile 😊</p>
+    <p>Ninu nange innocent tarane feel agtiya, hope nin love life ninige sigli. Ninu ista pador jote 
+    konevargu irotara agli. Enjoy your day🎉</p>
+    <p>Never stop being the amazing person you are. The world feels brighter with you ✨</p>
+    <p class="highlight">Be happy forever, Gilli 💜 May your smile always stay bright 🌸</p>
+    <div class="from">With warm wishes and good thoughts,<br>💅🏻Someone who truly wishes you the best</div>
   </div>
 </div>
 
@@ -173,12 +152,12 @@ function createSparkle() {
 }
 
 // Burst of sparkles initially
-for (let i = 0; i < 40; i++) {
-  setTimeout(createSparkle, i * 80);
+for (let i = 0; i < 50; i++) {
+  setTimeout(createSparkle, i * 60);
 }
 
-// Continuous gentle sparkles
-setInterval(createSparkle, 300);
+// Continuous sparkles
+setInterval(createSparkle, 250);
 </script>
 
 </body>
