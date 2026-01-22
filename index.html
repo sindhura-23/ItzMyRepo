@@ -2,93 +2,98 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Happy Birthday Pavan 🎉</title>
+
+<!-- Google Font for fancy style -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 * {
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 body {
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("pavan-bg.jpg");
-  background-size: cover;
-  background-position: center;
+  background: #000; /* fallback */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   overflow: hidden;
-}
-
-/* Card */
-.card {
-  background: rgba(255,255,255,0.95);
-  border-radius: 22px;
-  padding: 28px 20px;
-  max-width: 480px;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
   position: relative;
-  animation: glow 3s infinite alternate;
 }
 
-@keyframes glow {
-  from {
-    box-shadow: 0 0 15px rgba(255,255,255,0.4),
-                0 0 30px rgba(255,255,255,0.3);
-  }
-  to {
-    box-shadow: 0 0 35px rgba(255,255,255,0.7),
-                0 0 60px rgba(255,255,255,0.5);
-  }
+/* Card container */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* Text reveal animation */
-h1 {
-  color: #ff7a18;
-  font-size: 2.2rem;
-  margin-bottom: 12px;
+/* Photo */
+.card img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
 }
 
-p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #444;
-  margin: 14px 0;
+/* Text overlay */
+.text-overlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  width: 90%;
+}
+
+/* Fancy title */
+.text-overlay h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.text-overlay p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 6px 0;
   opacity: 0;
-  transform: translateY(20px);
-  animation: reveal 1s ease forwards;
+  transform: translateY(10px);
+  animation: reveal 1s forwards;
 }
 
-.card p:nth-of-type(1) { animation-delay: 2s; }
-.card p:nth-of-type(2) { animation-delay: 4s; }
-.card p:nth-of-type(3) { animation-delay: 6s; }
-.card p:nth-of-type(4) { animation-delay: 8s; }
-.card p:nth-of-type(5) { animation-delay: 10s; }
+/* Each paragraph delay */
+.text-overlay p:nth-child(2) { animation-delay: 1.5s; }
+.text-overlay p:nth-child(3) { animation-delay: 3s; }
+.text-overlay p:nth-child(4) { animation-delay: 4.5s; }
+.text-overlay p:nth-child(5) { animation-delay: 6s; }
+.text-overlay p:nth-child(6) { animation-delay: 7.5s; }
 
 .highlight {
   font-weight: bold;
-  color: #ff6f00;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: #ffd700;
 }
 
 .from {
-  margin-top: 22px;
+  font-size: 0.85rem;
+  margin-top: 10px;
   font-style: italic;
-  color: #666;
+  color: #fff;
   opacity: 0;
-  animation: reveal 1s ease forwards;
-  animation-delay: 12s;
+  animation: reveal 1s forwards;
+  animation-delay: 9s;
 }
 
+/* Reveal animation */
 @keyframes reveal {
   to {
     opacity: 1;
@@ -96,12 +101,12 @@ p {
   }
 }
 
-/* Sparkle animation */
+/* Sparkle */
 .sparkle {
   position: fixed;
   width: 6px;
   height: 6px;
-  background: white;
+  background: #fff;
   border-radius: 50%;
   opacity: 0.8;
   box-shadow: 0 0 6px #fff;
@@ -120,44 +125,43 @@ p {
 <body>
 
 <div class="card">
-  <h1>🎉 Happy Birthday Pavan 🎂</h1>
+  <img src="pavan-bg.jpg" alt="Pavan">
+  <div class="text-overlay">
+    <h1>🎉 Happy Birthday Pavan 🤴🏻🎉🎊</h1>
 
-  <p>
-    Today isn’t just another day — it’s a reminder that someone truly special was born.
-    You bring positivity, smiles, and calm energy wherever you go.
-  </p>
+    <p>
+      Today isn’t just another day — it’s a reminder that someone truly special was born.
+    </p>
 
-  <p>
-    May this year surprise you with happiness, success, peace,
-    and moments that make you smile without any reason 😊
-  </p>
+    <p>
+      May this year surprise you with happiness, success, and moments that make you smile 😊
+    </p>
 
-  <p>
-    Ninu nange innocent tarane feel agtiya,
-    hope nin love life ninige sigli.
-    Ninu istapador jotene ninu konevargu irotara agli.
-    Nin olle mansige ollede agutte.
-  </p>
+    <p>
+      Ninu nange innocent tarane feel agtiya,
+      hope nin love life ninige sigli. Ni ista pador jote konevargu
+      irotara agli. Nin olle mansige yavaglu ollede agutte. Enjoy your day today.
+      
+    </p>
 
-  <p>
-    Never stop being the amazing person you are.
-    The world genuinely feels brighter with you in it ✨
-  </p>
+    <p>
+      Never stop being the amazing person you are. The world feels brighter with you ✨
+    </p>
 
-  <p class="highlight">
-    Be happy forever, Gilli 🤍<br/>
-    May your smile always stay the same and your heart always stay light 🌸
-  </p>
+    <p class="highlight">
+      Be happy forever, Gilli 😃<br/>
+      May your smile always stay bright 🌸
+    </p>
 
-  <div class="from">
-    With warm wishes and good thoughts,<br/>
-    💖 Someone who truly wishes you the best
+    <div class="from">
+      With warm wishes and good thoughts,<br/>
+      💅🏻 Someone who truly wishes you the best
+    </div>
   </div>
 </div>
 
 <script>
 // Sparkle creation
-const sparkles = ["sparkle"];
 function createSparkle() {
   const sparkle = document.createElement("div");
   sparkle.className = "sparkle";
@@ -168,12 +172,12 @@ function createSparkle() {
   setTimeout(() => sparkle.remove(), 2000);
 }
 
-// Initial burst
+// Burst of sparkles initially
 for (let i = 0; i < 40; i++) {
   setTimeout(createSparkle, i * 80);
 }
 
-// Continuous sparkle
+// Continuous gentle sparkles
 setInterval(createSparkle, 300);
 </script>
 
