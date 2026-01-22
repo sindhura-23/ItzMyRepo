@@ -3,66 +3,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday 🎉</title>
+  <title>Happy Birthday Pavan 🎉</title>
+
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
-      color: #333;
+      overflow: hidden;
     }
+
     .card {
       background: #ffffff;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      max-width: 400px;
-      animation: fadeIn 1.5s ease;
+      padding: 35px;
+      border-radius: 22px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      max-width: 420px;
+      text-align: center;
+      animation: popIn 1.5s ease;
+      position: relative;
+      z-index: 2;
     }
+
     h1 {
-      color: #ff5e78;
-      margin-bottom: 10px;
+      color: #ff4d6d;
+      margin-bottom: 8px;
+      font-size: 28px;
     }
+
+    h2 {
+      color: #6a5acd;
+      margin-bottom: 18px;
+    }
+
     p {
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.7;
+      color: #333;
     }
-    .from {
-      margin-top: 20px;
+
+    .highlight {
+      color: #ff7a18;
       font-weight: bold;
-      color: #555;
+      font-size: 17px;
+      margin-top: 20px;
     }
-    @keyframes fadeIn {
-      from {
+
+    .from {
+      margin-top: 25px;
+      font-size: 15px;
+      color: #555;
+      font-style: italic;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.7);
         opacity: 0;
-        transform: translateY(20px);
       }
-      to {
+      100% {
+        transform: scale(1);
         opacity: 1;
+      }
+    }
+
+    /* Floating hearts animation */
+    .heart {
+      position: absolute;
+      bottom: -20px;
+      color: rgba(255, 77, 109, 0.6);
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
         transform: translateY(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh);
+        opacity: 0;
       }
     }
   </style>
 </head>
+
 <body>
+
   <div class="card">
-    <h1>🎉 Happy Birthday 🎂</h1>
+    <h1>🎂 Happy Birthday 🎉</h1>
+    <h2>Dear <span class="highlight">Pavan</span> 💫</h2>
+
     <p>
-      Wishing you a day filled with happiness, laughter, and all the things you love.
-      May this year bring you success, peace, and unforgettable moments.
+      Today isn’t just another day — it’s a reminder that someone truly special
+      was born. You bring positivity, smiles, and calm energy wherever you go.
     </p>
+
     <p>
-      Stay amazing always and keep smiling 😊
+      May this year surprise you with happiness, success, peace, and moments
+      that make you smile without any reason 😊
     </p>
+
+    <p>
+      Never stop being the amazing person you are. The world genuinely feels
+      brighter with you in it ✨
+    </p>
+
+    <p class="highlight">
+      Be happy forever, Gilli 🤍  
+      May your smile always stay the same and your heart always stay light 🌸
+    </p>
+
     <div class="from">
-      — From someone who cares 💖
+      With warm wishes and good thoughts,<br/>
+      💖 Someone who truly wishes you the best
     </div>
   </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 15 + 15) + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
+
 </body>
 </html>
